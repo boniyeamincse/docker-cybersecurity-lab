@@ -9,8 +9,13 @@
 $_DVWA = array();
 $_DVWA[ 'db_server' ]   = 'localhost';
 $_DVWA[ 'db_database' ]  = 'dvwa';
+$_DVWA[ 'SQLI_DB' ]      = 'dvwa';
 $_DVWA[ 'db_user' ]      = 'dvwa';
 $_DVWA[ 'db_password' ]  = 'password';
+
+# DBMS type (MySQL, PostgreSQL, SQLite)
+$_DVWA['DBMS'] = 'MySQL';
+$DBMS = $_DVWA['DBMS'];
 
 # Only used with PostgreSQL or SQLite database selection.
 $_DVWA[ 'db_port' ] = '3306';
