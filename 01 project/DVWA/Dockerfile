@@ -42,8 +42,11 @@ RUN sed -i 's/allow_url_include = Off/allow_url_include = On/' /etc/php/7.4/apac
 # Download and extract DVWA
 # Using the official DVWA repository from GitHub
 WORKDIR /tmp
-RUN git clone https://github.com/digininja/DVWA.git && \
-    mv DVWA/* /var/www/html/ && \
+RUN git clone https://github.com/digininja/DVWA.git
+
+# Move DVWA to dvwa subdirectory for proper URL structure (/dvwa/)
+RUN mkdir -p /var/www/html/dvwa && \
+    mv DVWA/* /var/www/html/dvwa/ && \
     rm -rf DVWA
 
 # Copy custom configuration files
