@@ -52,7 +52,7 @@ RUN mkdir -p /var/www/html/dvwa && \
 # Copy custom configuration files
 # config.inc.php: DVWA database configuration
 # init-dvwa-db.sh: Database initialization script
-COPY config/config.inc.php /var/www/html/config/config.inc.php
+COPY config/config.inc.php /var/www/html/dvwa/config/config.inc.php
 COPY init-dvwa-db.sh /usr/local/bin/init-dvwa-db.sh
 
 # Make the init script executable
