@@ -7,24 +7,27 @@
 
 # Database connection settings
 $_DVWA = array();
+$_DVWA[ 'db_server' ]   = 'localhost';
+$_DVWA[ 'db_database' ]  = 'dvwa';
+$_DVWA[ 'db_user' ]      = 'dvwa';
+$_DVWA[ 'db_password' ]  = 'password';
 
-# Database server hostname or IP address
-$_DVWA['db_server'] = 'localhost';
+# Only used with PostgreSQL or SQLite database selection.
+$_DVWA[ 'db_port' ] = '3306';
 
-# Database username
-$_DVWA['db_user'] = 'dvwa';
+# ReCAPTCHA settings
+# Get keys from: https://www.google.com/recaptcha/admin
+$_DVWA[ 'recaptcha_public_key' ]  = '';
+$_DVWA[ 'recaptcha_private_key' ] = '';
 
-# Database password
-$_DVWA['db_password'] = 'password';
+# Default security level: 'impossible', 'high', 'medium', 'low'
+$_DVWA[ 'default_security_level' ] = 'impossible';
 
-# Database name
-$_DVWA['db_database'] = 'dvwa';
+# Default PHPIDS status: 'enabled' or 'disabled'
+$_DVWA[ 'default_phpids_level' ] = 'disabled';
 
-# Database port (default MySQL/MariaDB port is 3306)
-$_DVWA['db_port'] = '3306';
-
-# Path to database file for SQLite (not used in this setup)
-$_DVWA['db_file'] = '';
+# Verbose PHPIDS messages: 'true' or 'false' - Default 'false'
+$_DVWA[ 'default_phpids_verbose' ] = 'false';
 
 # MySQLi connection details array
 $db_config = array(
